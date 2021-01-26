@@ -111,20 +111,25 @@ public class Store : MonoBehaviour
 
     public void DisplayPrices(Text text, float money)
     {
-        text.text = money.ToString("C2");
+        text.text = "☭" + money.ToString("");
+
+        if (money < 1000)
+        {
+            text.text = "☭" + Math.Round(money).ToString();   
+        }
 
         if (money / 1000 >= 1)
         {
-            text.text = "£" + Math.Round(money / 1000, 3).ToString() + "K";
+            text.text = "☭" + Math.Round(money / 1000, 3).ToString() + "K";
         }
         if (money / 1000000 >= 1)
         {
-            text.text = "£" + Math.Round(money / 1000000, 3).ToString() + "M";
+            text.text = "☭" + Math.Round(money / 1000000, 3).ToString() + "M";
         }
 
         if (money / 1000000000 >= 1)
         {
-            text.text = "£" + Math.Round(money / 1000000000, 3).ToString() + "B";
+            text.text = "☭" + Math.Round(money / 1000000000, 3).ToString() + "B";
         }
 
     }

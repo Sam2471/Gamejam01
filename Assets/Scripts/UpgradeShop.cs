@@ -10,6 +10,7 @@ public class UpgradeShop : MonoBehaviour
     public float[] upgradeCost = new float[4];
     public int generateTone;
     public AudioSource upgradeSound;
+    public AudioClip sound;
     public Text upgradeCostText;
     public Text multiplierText;
     public float startCost = 500f;

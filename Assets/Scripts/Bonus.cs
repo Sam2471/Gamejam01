@@ -7,6 +7,7 @@ public class Bonus : MonoBehaviour
     public float bonusMoney;
     public float speed;
     public float horizontalSpeed;
+   
 
 
     private void Update()
@@ -29,6 +30,7 @@ public class Bonus : MonoBehaviour
         var thehandler = FindObjectOfType<MoneyHandler>();
         thehandler.totalMoney += thehandler.totalMoney / 5;
         Destroy(gameObject);
+ 
     }
 
 
